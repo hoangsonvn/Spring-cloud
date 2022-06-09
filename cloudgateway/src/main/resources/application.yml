@@ -13,6 +13,18 @@ spring:
           uri: http://localhost:2222/
           predicates:
           - Path=/service2/**
+          filters:
+          - name: RequestRateLimiter
+            args:
+              redis-rate-limiter:
+                replenishRate: 1
+                burstCapacity: 2
+                requestedTokens: 1
+redis:
+    database: 0
+    host: localhost
+    port: 6379
+        
 eureka:
   client:
     serviceUrl:

@@ -11,5 +11,5 @@ public class CloudgatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CloudgatewayApplication.class, args);
 	}
-
+	
 }
